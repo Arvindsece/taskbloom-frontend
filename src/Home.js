@@ -21,7 +21,7 @@ const Home = () => {
     }, []);
 
     const fetchTodos = useCallback(() => {
-        axios.get('http://localhost:5000/get', {
+        axios.get('https://taskbloom-backend-1.onrender.com/get', {
             headers: { 'x-auth-token': token }
         })
         .then(result => {
@@ -42,7 +42,7 @@ const Home = () => {
     }, [fetchTodos]);
 
     const handleEdit = (id) => {
-        axios.put(`http://localhost:5000/edit/${id}`, {}, {
+        axios.put(`https://taskbloom-backend-1.onrender.com/edit/${id}`, {}, {
             headers: { 'x-auth-token': token }
         })
         .then(() => {
@@ -57,7 +57,7 @@ const Home = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/delete/${id}`, {
+        axios.delete(`https://taskbloom-backend-1.onrender.com/delete/${id}`, {
             headers: { 'x-auth-token': token }
         })
         .then(() => {

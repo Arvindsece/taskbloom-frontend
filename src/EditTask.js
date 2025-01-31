@@ -16,7 +16,7 @@ const EditTask = ({ task, onClose, onUpdate }) => {
         }
 
         try {
-            await axios.put(`http://localhost:5000/update/${task._id}`,
+            await axios.put(`https://taskbloom-backend-1.onrender.com/${task._id}`,
                 {
                     task: editedTask.trim(),
                     dueDate: new Date(editedDueDate).toISOString()

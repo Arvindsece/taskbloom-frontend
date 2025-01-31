@@ -12,7 +12,7 @@ const Register = ({ onSwitch }) => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/register', {
+            const response = await axios.post('https://taskbloom-backend-1.onrender.com/api/auth/register', {
                 username,
                 email,
                 password
